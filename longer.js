@@ -1,5 +1,5 @@
 const longer = (req,res,next) =>{
-    console.log(req.method, req.url);
-    res.send("HELLO WORLD");
+    console.log("longer")
+    next();
 }
-module.export = longer;
+module.exports = longer;

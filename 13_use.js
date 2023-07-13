@@ -1,12 +1,8 @@
 const express = require('express');
-// const longer = require('./longer')
+const longer = require('./longer')
 const app = express();
 
-const longer = (req,res,next) =>{
-    console.log(req.method, req.url);
-}
-
-app.use(longer);
+app.use(longer); //we can pass a path on which we can apply middleware ex : app.use('/api',longer);
 
 app.get('/',(req,res)=>{
     res.send("Pilo World")
