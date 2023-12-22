@@ -31,6 +31,14 @@ app.get("/", (req,res)=>{
 	user[0].kidneys.push({healthy:isHealthy})
 	res.send("Done!")
 })
+.put("/",(req,res)=>{
+	let johnkidneys = user[0]["kidneys"].length;
+        for(let i=0;i<johnkidneys;i++)
+        {
+               user[0]["kidneys"].healthy = true
+        }
+	res.send("")	
+})
 .listen(3000,()=>{
 	console.log("App is listening at 3000")
 })
