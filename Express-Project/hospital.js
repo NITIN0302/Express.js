@@ -25,6 +25,7 @@ app.get("/", (req,res)=>{
 		unhealthy
 	})
 })
+.use(express.json())
 .post("/",(req,res)=>{
 	const isHealthy = req.body.isHealthy
 	user[0].kidneys.push({healthy:isHealthy})
