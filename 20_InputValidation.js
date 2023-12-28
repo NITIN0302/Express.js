@@ -10,9 +10,7 @@ app.post("/",(req,res)=>{
 		                       		  //return true or false according to the condition
 	if(!response.success)
 	{
-		res.json({
-			msg : "Something went wrong from inside"
-		})
+		throw new Error('my error');
 	}
 	res.json({
 		msg : `You have ${kidney.length} kidneys`
